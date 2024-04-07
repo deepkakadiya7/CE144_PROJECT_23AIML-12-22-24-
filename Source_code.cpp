@@ -184,10 +184,13 @@ int main(){
                 obj.editContact();
                 break;
            
-            
-            default:
-                
+            case '0':
+                cout << "Exiting...\n";
                 break;
+            default:
+                cout << "Invalid Selection ...!\n";
+                break;
+           
         }
     } while (choice != '0');
 return 0;
