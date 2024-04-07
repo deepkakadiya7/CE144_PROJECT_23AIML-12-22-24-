@@ -29,10 +29,32 @@ string Contact::getName() {
     return name;
 }
 
+
+
+
+
+class ContactManager {
+    Contact contacts[100];
+    int count;
+
+public:
+    ContactManager() {
+        count = 0;
+    }
+
+    void addContact();
+    void showAll();
+    void searchContact();
+    void editContact();
+    void deleteContact();
+    void sortContacts();
+    bool isValidPhoneNumber(long long phone);
+};
+
 int main(){
 
    char choice;
- 
+   ContactManager obj;
 
     do {
         cout << "1 --> Add Contact\n";
