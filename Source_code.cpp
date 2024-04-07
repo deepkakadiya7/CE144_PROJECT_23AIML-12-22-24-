@@ -79,6 +79,44 @@ void ContactManager::addContact() {
     }
 }
 
+void ContactManager::editContact() {
+    string searchName;
+    cout << "Enter the name of the contact to edit: ";
+    getline(cin, searchName);
+
+    bool found = false;
+    for (int i = 0; i < count; i++) {
+        if (contacts[i].getName() == searchName) {
+            long long phone;
+            string n, addr, desc;
+            cout << "Enter new phone Number (10 digits): ";
+            cin >> phone;
+            cin.ignore();
+
+            if (!isValidPhoneNumber(phone)) {
+                cout << "Invalid phone number! Please enter exactly 10 digits.\n";
+                return;
+            }
+
+            cout << "Enter new Name: ";
+            getline(cin, n);
+            cout << "Enter new Address: ";
+            getline(cin, addr);
+            cout << "Enter new Description: ";
+            getline(cin, desc);
+
+            contacts[i].setContact(phone, n, addr, desc);
+            cout << "Contact edited successfully\n";
+            found = true;
+            break;
+        }
+    }
+
+    if (!found) {
+        cout << "Contact not found\n";
+    }
+}
+
 void ContactManager::showAll() {
     if (count == 0) {
         cout << "Contact list is empty\n";
@@ -113,6 +151,8 @@ void ContactManager::searchContact() {
 
 
 
+
+
 int main(){
 
    char choice;
@@ -139,6 +179,9 @@ int main(){
                 break;
             case '3':
                 obj.searchContact();
+                break;
+              case '4':
+                obj.editContact();
                 break;
            
             
