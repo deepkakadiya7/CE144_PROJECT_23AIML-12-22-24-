@@ -1,2 +1,1 @@
-# CE144_PROJECT_23AIML-12-22-24-
-CONTACT MANAGEMENT SYSTEM
+The Contact Management System developed in C++ by Deep (ID: 23AIML024), Dhairya (ID: 23AIML022), and Yash (ID: 23AIML012) is a comprehensive program designed to facilitate the efficient organization and management of contact information. This dynamic system offers a user-friendly interface for users to perform various operations, including adding, editing, searching, deleting, and sorting contacts.
