@@ -172,7 +172,16 @@ void ContactManager::deleteContact() {
     if (!found)
         cout << "Contact not found\n";
 }
-
+void ContactManager::sortContacts() {
+    for (int i = 0; i < count - 1; i++) {
+        for (int j = 0; j < count - i - 1; j++) {
+            if (contacts[j].getName() > contacts[j + 1].getName()) {
+                swap(contacts[j], contacts[j + 1]);
+            }
+        }
+    }
+    cout << "Contacts sorted successfully\n";
+}
 
 
 
@@ -208,6 +217,9 @@ int main(){
                 break;
              case '5':
                 obj.deleteContact();
+                break;
+            case '6':
+                obj.sortContacts();
                 break;
            
             case '0':
