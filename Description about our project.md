@@ -7,3 +7,10 @@ Key Features:
 
   3) User Interface: The program features a menu-driven interface that allows users to interact with the system seamlessly. Users can choose from various options displayed in the menu to perform desired operations on contacts.
 
+How to Use:
+
+Upon execution, the program presents users with a menu prompting them to select an action to perform on contacts. Users can input their choice by entering a corresponding number. The system then executes the chosen operation, providing feedback and guidance as needed.
+
+Collaborators:
+
+This project was collaboratively developed by Deep (ID: 23AIML024), Dhairya (ID: 23AIML022), and Yash (ID: 23AIML012), each contributing their expertise and efforts to create a robust and efficient Contact Management System.
