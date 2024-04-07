@@ -92,6 +92,26 @@ void ContactManager::showAll() {
 }
 
 
+void ContactManager::searchContact() {
+    string searchName;
+    cout << "Enter the name to search: ";
+    getline(cin, searchName);
+
+    bool found = false;
+    for (int i = 0; i < count; i++) {
+        if (contacts[i].getName() == searchName) {
+            cout << "Contact found\n";
+            contacts[i].displayContact();
+            found = true;
+            break;
+        }
+    }
+
+    if (!found)
+        cout << "Contact not found\n";
+}
+
+
 
 int main(){
 
@@ -116,6 +136,9 @@ int main(){
                 break;
             case '2':
                 obj.showAll();
+                break;
+            case '3':
+                obj.searchContact();
                 break;
            
             
