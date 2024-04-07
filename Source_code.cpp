@@ -51,6 +51,35 @@ public:
     bool isValidPhoneNumber(long long phone);
 };
 
+
+void ContactManager::addContact() {
+    long long phone;
+    string n, addr, desc;
+    cout << "Enter phone Number (10 digits): ";
+    cin >> phone;
+    cin.ignore();
+
+    if (!isValidPhoneNumber(phone)) {
+        cout << "Invalid phone number! Please enter exactly 10 digits.\n";
+        return;
+    }
+
+    cout << "Enter Name: ";
+    getline(cin, n);
+    cout << "Enter Address: ";
+    getline(cin, addr);
+    cout << "Enter Description: ";
+    getline(cin, desc);
+
+    if (count < 100) {
+        contacts[count].setContact(phone, n, addr, desc);
+        count++;
+    } else {
+        cout << "Contact list is full\n";
+    }
+}
+
+
 int main(){
 
    char choice;
@@ -70,6 +99,7 @@ int main(){
 
         switch(choice) {
             case '1':
+                obj.addContact();
                 break;
            
             
