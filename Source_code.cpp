@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 class Contact {
@@ -200,7 +201,7 @@ int main(){
         cout << "0 --> Exit\n";
         cout << "Enter your choice: ";
         cin >> choice;
-        cin.ignore(); // Clear the newline character from the buffer
+        cin.ignore();
 
         switch(choice) {
             case '1':
