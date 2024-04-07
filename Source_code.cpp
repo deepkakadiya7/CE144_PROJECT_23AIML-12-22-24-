@@ -1,6 +1,34 @@
 #include <iostream>
 using namespace std;
 
+class Contact {
+    long long phoneNo;
+    string name, address, description;
+
+public:
+    void setContact(long long phone, string n, string addr, string desc);
+    void displayContact();
+    string getName();
+};
+
+void Contact::setContact(long long phone, string n, string addr, string desc) {
+    phoneNo = phone;
+    name = n;
+    address = addr;
+    description = desc;
+}
+
+void Contact::displayContact() {
+    cout << "Phone Number: " << phoneNo << endl;
+    cout << "Name: " << name << endl;
+    cout << "Address: " << address << endl;
+    cout << "Description: " << description << endl;
+}
+
+string Contact::getName() {
+    return name;
+}
+
 int main(){
 
    char choice;
