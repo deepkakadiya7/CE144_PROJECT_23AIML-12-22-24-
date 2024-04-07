@@ -52,7 +52,17 @@ public:
     bool isValidPhoneNumber(long long phone);
 };
 
+bool ContactManager::isValidPhoneNumber(long long phone) {
+    long long temp = phone;
+    int digitCount = 0;
 
+    while (temp != 0) {
+        temp /= 10;
+        digitCount++;
+    }
+
+    return (digitCount == 10);
+}
 void ContactManager::addContact() {
     long long phone;
     string n, addr, desc;
