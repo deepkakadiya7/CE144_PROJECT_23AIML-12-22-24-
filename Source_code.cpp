@@ -79,6 +79,19 @@ void ContactManager::addContact() {
     }
 }
 
+void ContactManager::showAll() {
+    if (count == 0) {
+        cout << "Contact list is empty\n";
+    } else {
+        for (int i = 0; i < count; i++) {
+            cout << "Contact " << i + 1 << endl;
+            contacts[i].displayContact();
+            cout << endl;
+        }
+    }
+}
+
+
 
 int main(){
 
@@ -100,6 +113,9 @@ int main(){
         switch(choice) {
             case '1':
                 obj.addContact();
+                break;
+            case '2':
+                obj.showAll();
                 break;
            
             
