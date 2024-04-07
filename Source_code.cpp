@@ -149,6 +149,29 @@ void ContactManager::searchContact() {
         cout << "Contact not found\n";
 }
 
+void ContactManager::deleteContact() {
+    string searchName;
+    cout << "Enter the name of the contact to delete: ";
+    getline(cin, searchName);
+
+    bool found = false;
+    for (int i = 0; i < count; i++) {
+        if (contacts[i].getName() == searchName) {
+            for (int j = i; j < count - 1; j++) {
+                contacts[j] = contacts[j + 1];
+            }
+            count--;
+          
+            contacts[count].setContact(0, "", "", "");
+            cout << "Contact deleted successfully\n";
+            found = true;
+            break;
+        }
+    }
+
+    if (!found)
+        cout << "Contact not found\n";
+}
 
 
 
@@ -182,6 +205,9 @@ int main(){
                 break;
               case '4':
                 obj.editContact();
+                break;
+             case '5':
+                obj.deleteContact();
                 break;
            
             case '0':
